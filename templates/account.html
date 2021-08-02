@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/login.css')}}">
+{% endblock %}
+
+{% block content %}
+    <div class="card">
+        <h1>{{username}}</h1>
+        <a href="/reset-password" class="word-btn">Reset Password</a>
+    </div>
+{% endblock %}

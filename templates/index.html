@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/index.css')}}">
+<script defer src="{{url_for('static', filename='js/index.js')}}"></script>
+{% endblock %}
+
+{% block content %}
+<div class="upload-modal">
+    <div class="card">
+        <h1>New Snippet</h1>
+        <input type="text" name="title" id="title" placeholder="Title">
+        <textarea id="content" cols="60" rows="10" placeholder="Snippet Content"></textarea>
+        <div style="display: flex; background-color: unset;">
+            <input type="radio" id="public" name="visibility" value="3" style="display: none;">
+            <label for="public">Public</label><br>
+            <input type="radio" id="unlisted" name="visibility" value="2" style="display: none;">
+            <label for="unlisted">Unlisted</label><br>
+            <input type="radio" id="private" name="visibility" value="1" style="display: none;">
+            <label for="private">Private</label> 
+        </div>
+        <div id="upload-snippet" class="word-btn">Upload</div>
+    </div>
+</div>
+{% endblock %}
